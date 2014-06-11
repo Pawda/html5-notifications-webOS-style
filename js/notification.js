@@ -68,20 +68,20 @@
 				body: 'From: Nigerian Prince',
 				icon: 'images/email.png' 
 			});
-			en.onshow = function() { setTimeout(en.close, ms) }
+			en.onshow = function() { setTimeout(function() { en.close(); }, ms); };
 		}
 		if(calendarToggle.checked) {
 			var cn = new Notification('Shaolin Kung-Fu Class', { 
 				body: 'Sunday, March 23 5:30 PM',
 				icon: 'images/calendar.png' 
 			});
-			cn.onshow = function() { setTimeout(cn.close, ms) }
+			cn.onshow = function() { setTimeout(function() { cn.close(); }, ms); };
 		}
 		if(fbToggle.checked) {
 			var fn = new Notification('Chuck Norris poked you', { 
 				icon: 'images/fb.png' }
 			);
-			fn.onshow = function() { setTimeout(fn.close, ms) }
+			fn.onshow = function() { setTimeout(function() { fn.close(); }, ms); };
 		}
 	}
 })();
